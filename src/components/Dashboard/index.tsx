@@ -69,9 +69,9 @@ export const Dashboard: FunctionComponent = () => {
   if (isLoading) {
     return <DashboardWrapper>Loading...</DashboardWrapper>;
   }
-  if (error) {
-    return <DashboardWrapper>errror</DashboardWrapper>;
-  }
+  // if (error) {
+  //   return <DashboardWrapper>errror</DashboardWrapper>;
+  // }
 
   return (
     <DashboardWrapper>

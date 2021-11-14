@@ -9,30 +9,33 @@ import { Wrapper } from "./components/Wrapper";
 
 import "./App.css";
 import { useState } from "react";
-import { UserType } from "./context";
+import { Reply } from "./components/Reply";
+import { Confirmation } from "./components/Confirmation";
+import { ViewReplies } from "./components/ViewReplies";
 
-export interface UserState {
-  user: UserType;
-  setUser: (user: any) => void;
+export interface UserType {
+  uid: string;
+  [x: string]: any;
 }
+
+// export interface UserState {
+//   user: UserType;
+//   setUser: (user: any) => void;
+// }
 
 const queryClient = new QueryClient();
 
 export default function App() {
-  const [user, setUser] = useState<UserType>({ uid: "" });
   return (
     <QueryClientProvider client={queryClient}>
       <Wrapper>
         <Router>
           <Routes>
-            <Route
-              path="/dashboard"
-              element={<Dashboard user={user} setUser={setUser} />}
-            />
-            <Route
-              path="/"
-              element={<SignInScreen user={user} setUser={setUser} />}
-            />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/reply" element={<Reply />} />
+            <Route path="/confirmation" element={<Confirmation />} />
+            <Route path="/view-replies" element={<ViewReplies />} />
+            <Route path="/" element={<SignInScreen />} />
           </Routes>
         </Router>
       </Wrapper>

@@ -1,12 +1,12 @@
 // Import FirebaseAuth and firebase.
-import { FunctionComponent, useContext, useEffect, useState } from "react";
+import { FunctionComponent } from "react";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import { initializeApp } from "@firebase/app";
 import { getAuth, EmailAuthProvider } from "@firebase/auth";
-import { UserContext, UserType } from "../../context";
-import { Navigate } from "react-router-dom";
-import { UserState } from "../../App";
+import { UserType } from "../../App";
+// import { UserState } from "../../App";
 // import { useNavigate } from "react-router-dom";
+import { DashboardWrapper } from "../Dashboard";
 
 // Configure Firebase.
 const config = {
@@ -20,10 +20,7 @@ const config = {
 
 export const firebase = initializeApp(config);
 
-export const SignInScreen: FunctionComponent<UserState> = ({
-  user,
-  setUser,
-}) => {
+export const SignInScreen: FunctionComponent = () => {
   //   const { user, setUser } = useContext(UserContext);
   //   const [isLoggedIn, setIsLoggedIn] = useState(false);
   //   const history = useNavigate();
@@ -35,13 +32,13 @@ export const SignInScreen: FunctionComponent<UserState> = ({
     signInSuccessUrl: "/dashboard",
     // We only want user name and password to be able to sign in.
     signInOptions: [EmailAuthProvider.PROVIDER_ID],
-    callbacks: {
-      signInSuccessWithAuthResult: function (authResult: { user: UserType }) {
-        console.log(authResult.user);
-        setUser(authResult.user);
-        return true;
-      },
-    },
+    // callbacks: {
+    //   signInSuccessWithAuthResult: function (authResult: { user: UserType }) {
+    //     console.log(authResult.user);
+    //     setUser(authResult.user);
+    //     return true;
+    //   },
+    // },
   };
 
   //   useEffect(() => {
@@ -57,8 +54,8 @@ export const SignInScreen: FunctionComponent<UserState> = ({
   //   }
 
   return (
-    <div>
+    <DashboardWrapper>
       <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={getAuth()} />
-    </div>
+    </DashboardWrapper>
   );
 };

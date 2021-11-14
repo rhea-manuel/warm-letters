@@ -1,4 +1,6 @@
 @import url("./utils/normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Patrick+Hand&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -27,8 +29,7 @@ p {
   box-shadow: 18px 20px 0px -11px rgba(251, 143, 133, 1);
   -webkit-box-shadow: 18px 20px 0px -11px rgba(251, 143, 133, 1);
   -moz-box-shadow: 18px 20px 0px -11px rgba(251, 143, 133, 1);
-  font-size: 24px;
-  padding: 2%;
+  padding: 1.5%;
   color: #fa8072;
 }
 .nav-button:hover {
@@ -36,12 +37,33 @@ p {
   box-shadow: 18px 20px 0px -11px rgba(251, 143, 133, 1) !important;
   -webkit-box-shadow: 18px 20px 0px -11px rgba(251, 143, 133, 1);
   -moz-box-shadow: 18px 20px 0px -11px rgba(251, 143, 133, 1);
-  font-size: 24px;
-  padding: 2%;
+  padding: 1.5%;
   color: #fa8072;
 }
 
 .button {
   color: #fa8072;
   border: 2px solid #fa8072 !important;
+}
+
+.pane {
+  box-shadow: 18px 20px 0px -11px rgba(251, 143, 133, 1);
+  -webkit-box-shadow: 18px 20px 0px -11px rgba(251, 143, 133, 1);
+  -moz-box-shadow: 18px 20px 0px -11px rgba(251, 143, 133, 1);
+  border: 2px solid #fb8f85;
+  padding: 4%;
+  background: white;
+}
+
+.heading {
+  font-size: 64px;
+  color: rgba(251, 143, 133, 1);
+  font-family: "Pacifico";
+  font-weight: normal;
+}
+
+.heading2 {
+  color: rgba(251, 143, 133, 1);
+  font-family: "Pacifico";
+  font-weight: normal;
 }

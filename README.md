@@ -44,7 +44,7 @@ Half of the team hacked for the first time. It was a challenging but rewarding e
 
 # Accomplishments that we're proud of
 
-- Working effectively and remotely with teammates we had never met prior to Technica2021.
+- Working effectively and remotely with teammates.
 - Constantly collaborated and kept other members informed, provided and took help when needed.
 
 # What we learned
